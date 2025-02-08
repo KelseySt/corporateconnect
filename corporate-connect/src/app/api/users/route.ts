@@ -1,0 +1,48 @@
+import connectMongoDB from "@/libs/mongodb";
+import User from "@/models/UserSchema";
+import { NextRequest, NextResponse } from "next/server";
+
+
+interface RouteParams {
+    params: { userId: string };
+}
+
+export async function GET(request: NextRequest, { params }: RouteParams) {
+    const { userId } = params;
+    await connectMongoDB();
+    try {
+        const user = await User.findById(userId);
+        if(!user) {
+            return NextResponse.json({ error: 'User not found' }, { status: 404 });
+        }
+        return NextResponse.json(user, {status: 200 });
+    } catch (error) {
+        return NextResponse.json({ error: 'Failed to fetch user' }, { status: 500});
+    }
+}
+
+export async function PUT(request: NextRequest, { params }: RouteParams) {
+    const { userId } = params;
+    const { firstName: firstName, lastName: lastName, email: email, password: password} = await request.json();
+    await connectMongoDB();
+    try {
+        const updatedUser = await User.findByIdAndUpdate(userId, {firstName, lastName, email, password}, { new: true});
+        if (!updatedUser) {
+            return NextResponse.json({ error: 'User not found'}, { status: 404 });
+        }
+        return NextResponse.json({ error: 'Failed to update user' }, { status: 500 });
+    } catch (error) {
+        return NextResponse.json({ error: 'Failed to update user' }, { status: 500 });
+    }
+}
+
+export async function DELETE(request: NextRequest, { params }: RouteParams) {
+    const { userId } = params;
+    await connectMongoDB();
+    try {
+        const deletedUser = await User.findByIdAndDelete(userId);
+        return NextResponse.json({ messane: 'User deleted' }, { status: 200 });
+    } catch (error) {
+        return NextResponse.json({ error: 'Failed to delete user' }, { status: 500 });
+    }
+}

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^3.6.0",
     "@heroui/avatar": "^2.2.7",
     "@heroui/button": "^2.2.10",
     "@heroui/card": "^2.2.10",
@@ -22,13 +23,18 @@
     "@phosphor-icons/react": "^2.1.7",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "cookie": "^1.0.2",
     "dotenv": "^16.4.7",
     "framer-motion": "^12.4.1",
+    "jose": "^5.9.6",
     "mongodb": "^6.13.0",
     "mongoose": "^8.10.0",
     "next": "15.1.6",
+    "next": "^15.1.6",
+    "openid-client": "^6.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "url-join": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

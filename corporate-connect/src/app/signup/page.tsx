@@ -5,8 +5,6 @@ import { Input } from "@heroui/input";
 import { Button, ButtonGroup } from "@heroui/button";
 import { useRouter } from "next/navigation";
 import { useState, ChangeEvent, FormEvent } from "react";
-import React, { useReducer } from "react";
-import { em } from "framer-motion/client";
 
 type User = {
   firstName: string;
@@ -87,7 +85,7 @@ export default function Signup() {
       <section className="bg-llgrey">
         <div className="rounded-3xl bg-llgrey py-[3rem] px-[10rem] border-4 border-brightpurple items-center">
           <div className="items-center">
-            <form onSubmit={submitHandler}>
+            <form className="items-center" onSubmit={submitHandler}>
               {error && <p>{error}</p>}
               <div className="w-full flex flex-row flex-wrap gap-4">
                 <Input
@@ -109,7 +107,7 @@ export default function Signup() {
                   variant="bordered"
                   label="Last Name"
                   placeholder="Enter your last name"
-                  type="password"
+                  type="input"
                   value={lastName}
                   onChange={lastNameHandler}
                 />
@@ -146,7 +144,7 @@ export default function Signup() {
                 color="secondary"
                 variant="ghost"
                 type="submit"
-                onPress={handleSignupSubmit}
+                //onPress={handleSignupSubmit}
               >
                 Submit
               </Button>

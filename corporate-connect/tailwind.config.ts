@@ -6,7 +6,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@heroui/theme/dist/components/(button|input|ripple|spinner|form|avatar|progress|skeleton).js"
+    "./node_modules/@heroui/theme/dist/components/(avatar|progress|skeleton).js"
   ],
   theme: {
     extend: {
@@ -15,8 +15,6 @@ export default {
         foreground: "var(--foreground)",
         dpurple: "#342459",
         lpurple:"#9C7CFC",
-        brightpurple:"#7828c8",
-        llgrey:"#E9ECEF",
         lgrey: "#DEE2E6",
         grey: "#ADB5BD",
         dgrey: "#495057",

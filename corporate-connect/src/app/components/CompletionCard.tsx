@@ -3,7 +3,7 @@ import React from "react";
 import { CircularProgress } from "@heroui/progress";
 import { roboto_flex } from "../fonts";
 
-export default function CompletionCard() {
+export default function CompletionCard({ points }) {
   const [value, setValue] = React.useState(0);
 
   React.useEffect(() => {
@@ -14,12 +14,13 @@ export default function CompletionCard() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="bg-lgrey mx-5 @apply shadow-[0_4px_8px_0_rgba(0,0,0,0.5)] transition-[0.3s] hover:shadow-[0_8px_16px_0_rgba(0,0,0,0.2)];">
+    <div className="bg-lgrey mx-5 @apply shadow-[0_4px_8px_0_rgba(0,0,0,0.5)] transition-[0.3s] hover:shadow-[0_8px_16px_0_rgba(0,0,0,0.9)];">
       <div className="mt-5 px-4 py-0.5">
         <div>
           <h3 className={`${roboto_flex.className} text-center`}>Progress</h3>
         </div>
         <CircularProgress
+          className="mx-auto"
           classNames={{
             svg: "w-36 h-36 drop-shadow-md",
             indicator: "lpurple",
@@ -33,7 +34,7 @@ export default function CompletionCard() {
           color="secondary"
           showValueLabel={true}
           size="lg"
-          value={value}
+          value={Math.ceil((points / 42) * 100)}
         />
       </div>
     </div>

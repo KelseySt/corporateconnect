@@ -71,7 +71,9 @@ export default function BalanceSheetPage() {
         />
 
         {data.map(({ id, label, img, content, iconPosition }) => (
+            
           <div key={id}>
+            <p>Test</p>
             <div
               className="absolute cursor-pointer text-xl font-bold bg-lpurple text-white rounded-full w-6 h-6 flex justify-center items-center hover:bg-dpurple transition"
               style={iconPosition}

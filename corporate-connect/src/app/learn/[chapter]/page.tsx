@@ -1,6 +1,5 @@
 "use client"
 import { outfit, roboto_flex } from '../../fonts'
-import {Accordion, AccordionItem} from "@heroui/react";
 import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@heroui/react";
 import { BookOpenText, HandCoins } from "@phosphor-icons/react";
 import { useRouter, useParams } from 'next/navigation';

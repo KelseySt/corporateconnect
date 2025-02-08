@@ -1,16 +1,15 @@
 "use client";
 import { useState } from "react";
-import { Image } from "@heroui/react";
+import { Image, Modal,
+    ModalContent,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+    Button,
+    useDisclosure, } from "@heroui/react";
+
 import Link from "next/link";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-} from "@heroui/react";
+
 
 export default function BalanceSheetPage() {
   const [activeCard, setActiveCard] = useState<string | null>(null);
@@ -73,7 +72,6 @@ export default function BalanceSheetPage() {
 
         {data.map(({ id, label, img, content, iconPosition }) => (
           <div key={id}>
-            
             <div
               className="absolute cursor-pointer text-xl font-bold bg-lpurple text-white rounded-full w-6 h-6 flex justify-center items-center hover:bg-dpurple transition"
               style={iconPosition}
@@ -85,6 +83,7 @@ export default function BalanceSheetPage() {
 
             <Modal className="bg-lgrey m-48 p-14 justify-center rounded-2xl" isOpen={isOpen && activeCard === id} onOpenChange={onOpenChange}>
               <ModalContent>
+                
                 {(onClose) => (
                   <>
                     <ModalHeader className="text-2xl">

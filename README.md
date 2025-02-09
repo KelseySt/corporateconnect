@@ -30,3 +30,17 @@ After planning, we decided on a Next.js frontend with Tailwind CSS and various R
 - Including a sentiment analysis on companies based on recent news headlines, social media posts, etc. to gain a greater contextual understanding of why certain numbers land that way.
 - Fleshing out more specified tracks for the public to learn (Ex. 401Ks/Investing through a company lens)
 - Adding a leaderboard-style league (similar to Duolingo) for completing lessons and quizzes (introduces a more direct social element).
+
+## Public APIs/Resources used
+- HeroUI (React component library)
+- Financial Modeling Prep API
+- Flaticon Icons
+  - Metric icons, Balance sheet icons created by zero_wing
+  - Balance-sheet icons created by Prosymbols Premium
+  - Market-analysis icons created by Freepik
+  - Assets icons created by dDara
+  - Liability icons created by Three musketeers
+  - Payable icons created by Designing Hub
+  - Equity icons created by noomtah
+  - Financial ratio icons created by Ida Desi Mariana
+  - Inventory icons created by Nhor Phai

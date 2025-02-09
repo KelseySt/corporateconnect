@@ -15,9 +15,9 @@ export default function CompletionCard({ points }) {
   }, []);
   return (
     <div className="bg-lgrey mx-5 @apply shadow-[0_4px_8px_0_rgba(0,0,0,0.5)] transition-[0.3s] hover:shadow-[0_8px_16px_0_rgba(0,0,0,0.9)];">
-      <div className="mt-5 px-4 py-0.5">
+      <div className="my-5 px-4 py-0.5">
         <div>
-          <h3 className={`${roboto_flex.className} text-center`}>Progress</h3>
+          <h3 className={`${roboto_flex.className} text-center`}>Lesson Progress</h3>
         </div>
         <CircularProgress
           className="mx-auto"

@@ -38,14 +38,14 @@ export default function ProfileNav() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
+        {/*<NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
-        </NavbarItem>
+        </NavbarItem>*/}
         <NavbarItem>
           <Button
             as={Link}
             color="secondary"
-            href="/auth/logout"
+            href="api/auth/logout"
             variant="ghost"
           >
             Logout

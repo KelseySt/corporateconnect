@@ -49,8 +49,12 @@ export default async function Home() {
       </div>
     );
   }
-
+  
   redirect('/profile');
- 
+  <a
+    className="rounded-xl max-w-[220px] bg-llgrey" 
+    href="/auth/login">
+      <button>Log in</button>
+  </a>
   
 }

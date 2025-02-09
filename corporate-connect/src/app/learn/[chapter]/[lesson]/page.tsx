@@ -56,7 +56,7 @@ export default function BalanceSheetPage() {
   };
 
   return (
-    <div className="flex flex-col items-center p-4 bg-gray-100 min-h-screen">
+    <div className="flex flex-col items-center p-4 bg-gray-100 min-h-screen relative z-0">
       <div className="flex flex-row gap-5">
         <Link href="/learn/1" className="">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z"></path></svg>
@@ -65,7 +65,8 @@ export default function BalanceSheetPage() {
       </div>
       <div className="relative">
         <Image
-          alt="Balance Sheet"
+        className="relative z-10"
+          alt="Balance Sheet" 
           src="/images/balance-sheet-walmart.png"
           width={900}
         />
@@ -73,9 +74,8 @@ export default function BalanceSheetPage() {
         {data.map(({ id, label, img, content, iconPosition }) => (
             
           <div key={id}>
-            <p>Test</p>
             <div
-              className="absolute cursor-pointer text-xl font-bold bg-lpurple text-white rounded-full w-6 h-6 flex justify-center items-center hover:bg-dpurple transition"
+              className="absolute z-20 cursor-pointer text-xl font-bold bg-lpurple text-white rounded-full w-6 h-6 flex justify-center items-center hover:bg-dpurple transition"
               style={iconPosition}
               onClick={() => handleOpen(id)}
               title={label}
@@ -83,28 +83,26 @@ export default function BalanceSheetPage() {
               ?
             </div>
 
-            <Modal className="bg-lgrey m-48 p-14 justify-center rounded-2xl" isOpen={isOpen && activeCard === id} onOpenChange={onOpenChange}>
+            <Modal className="bg-lgrey m-48 max-w-[20rem] rounded-2xl z-20" isOpen={isOpen && activeCard === id} onOpenChange={onOpenChange}>
               <ModalContent>
                 
                 {(onClose) => (
                   <>
-                    <ModalHeader className="text-2xl">
+                    <ModalHeader className="text-2xl justify-center">
                       {label}
                     </ModalHeader>
-                    <ModalBody>
+                    <ModalBody className="z-30">
                     <Image
                     alt="Card background"
-                    className="object-cover rounded-xl"
+                    className="object-cover rounded-xl justify-center"
                     src={img}
                     width={260}
                     />
                       <p className="max-w-[260px]">{content}</p>
-                    </ModalBody>
-                    <ModalFooter>
                       <Button className="bg-lpurple hover:text-white rounded-lg px-4 py-1" onPress={onClose}>
                         Got it!
                       </Button>
-                    </ModalFooter>
+                    </ModalBody>
                   </>
                 )}
               </ModalContent>

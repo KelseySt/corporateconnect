@@ -1,5 +1,5 @@
 # HacksX : CorporateConnect
-
+By Kelsey Sterner and Alexis Dogins
 # 💡 Inspiration
 Our project was inspired by the Truist Challenge, as we believe learning more about finance from an employee perspective and understanding the nuances of business is vital to future financial success. Creating an interactive and fun application to teach important financial knowledge is a great way to keep financial literacy accessible and free to the public. With the wide range of complex information surrounding finance, it becomes that much more important to understand how the businesses that build and dictate our economy function.
 

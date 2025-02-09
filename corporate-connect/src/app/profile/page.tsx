@@ -43,9 +43,18 @@ export default function Profile() {
               Companies You Follow
             </h2>
             <div className="mx-4 grid grid-cols-3">
-              <CompanyCard></CompanyCard>
-              <CompanyCard></CompanyCard>
-              <CompanyCard></CompanyCard>
+              <CompanyCard
+                title="Spotify"
+                img="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green-300x300.png"
+              ></CompanyCard>
+              <CompanyCard
+                title="Apple"
+                img="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed3d547-94ff-48e1-9f20-8c14a7030a02_2000x2000.jpeg"
+              ></CompanyCard>
+              <CompanyCard
+                title="Truist"
+                img="https://interbrand.com/wp-content/uploads/2020/01/1_Logo-cropped.jpg"
+              ></CompanyCard>
             </div>
           </section>
         </div>

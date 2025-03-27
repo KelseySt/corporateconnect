@@ -45,15 +45,15 @@ export default function Profile() {
             <div className="mx-4 grid grid-cols-3">
               <CompanyCard
                 title="Spotify"
-                img="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green-300x300.png"
+                img="hhttps://images.unsplash.com/photo-1613329671121-5d1cf551cc3f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BvdGlmeXxlbnwwfHwwfHx8Mg%3D%3D"
               ></CompanyCard>
               <CompanyCard
                 title="Apple"
-                img="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed3d547-94ff-48e1-9f20-8c14a7030a02_2000x2000.jpeg"
+                img="https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFwcGxlfGVufDB8fDB8fHwy"
               ></CompanyCard>
               <CompanyCard
                 title="Truist"
-                img="https://interbrand.com/wp-content/uploads/2020/01/1_Logo-cropped.jpg"
+                img="https://images.unsplash.com/photo-1631740566766-5b41b9ca58ef?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VHJ1aXN0fGVufDB8fDB8fHwy"
               ></CompanyCard>
             </div>
           </section>

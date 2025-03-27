@@ -45,7 +45,7 @@ export default function LearnNav() {
           <Button
             as={Link}
             color="secondary"
-            href="/auth/logout"
+            href="api/auth/logout"
             variant="ghost"
           >
             Logout

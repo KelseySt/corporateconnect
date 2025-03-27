@@ -45,7 +45,7 @@ export default function CompanyNav() {
           <Button
             as={Link}
             color="secondary"
-            href="/auth/logout"
+            href="api/auth/logout"
             variant="ghost"
           >
             Logout
